@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/salsa/esp/projekt/czujnik_smart_home_matter/build/CMakeFiles/bootloader
+/home/salsa/esp/projekt/czujnik_smart_home_matter/build/CMakeFiles/bootloader.rule
+/home/salsa/esp/projekt/czujnik_smart_home_matter/build/CMakeFiles/bootloader-complete.rule
+/home/salsa/esp/projekt/czujnik_smart_home_matter/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/salsa/esp/projekt/czujnik_smart_home_matter/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/salsa/esp/projekt/czujnik_smart_home_matter/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/salsa/esp/projekt/czujnik_smart_home_matter/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/salsa/esp/projekt/czujnik_smart_home_matter/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/salsa/esp/projekt/czujnik_smart_home_matter/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/salsa/esp/projekt/czujnik_smart_home_matter/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

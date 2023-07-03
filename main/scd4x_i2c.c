@@ -35,7 +35,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
+#include <stdio.h>
 #include "scd4x_i2c.h"
 #include "sensirion_common.h"
 #include "sensirion_i2c.h"

@@ -5,6 +5,12 @@
  */
 
 
+#include "scd4x_i2c.h"
+#include "scd4x_i2c.c"
+#include "sensirion_common.h"
+#include "sensirion_common.c"
+#include "sensirion_i2c_hal.h"
+#include "sensirion_i2c_hal.c"
 
 #include <stdio.h>
 #include <string.h>
@@ -50,17 +56,19 @@
 #define SCD4x_COMMAND_MEASURE_SINGLE_SHOT_RHT_ONLY            0x2196 // execution time: 50ms
 
 #define I2C_MASTER_NUM      I2C_NUM_0        // Numer interfejsu I2C
-#define I2C_MASTER_SCL_IO   6               // GPIO pin dla linii SCL
-#define I2C_MASTER_SDA_IO   7               // GPIO pin dla linii SDA
-#define I2C_MASTER_FREQ_HZ  100000           // Szybkość transmisji I2C (400 kHz)
-#define I2C_MASTER_TIMEOUT_MS  1000
+#define I2C_MASTER_SCL_IO   0               // GPIO pin dla linii SCL
+#define I2C_MASTER_SDA_IO   1               // GPIO pin dla linii SDA
+#define I2C_MASTER_FREQ_HZ          400000                     /*!< I2C master clock frequency */
+#define I2C_MASTER_TX_BUF_DISABLE   0                          /*!< I2C master doesn't need buffer */
+#define I2C_MASTER_RX_BUF_DISABLE   0                          /*!< I2C master doesn't need buffer */
+#define I2C_MASTER_TIMEOUT_MS       1000
 
 #define SDC40_I2C_ADDR      0x62             // Adres czujnika SDC40
 
 #define TAG                 "SDC40"
 
 // Inicjalizacja interfejsu I2C
-static void i2c_master_init()
+static esp_err_t i2c_master_init(void)
 {
     i2c_config_t conf = {
     .mode = I2C_MODE_MASTER,
@@ -73,8 +81,8 @@ static void i2c_master_init()
     
     };
    
-    ESP_ERROR_CHECK(i2c_param_config(I2C_MASTER_NUM, &conf));
-    ESP_ERROR_CHECK(i2c_driver_install(I2C_MASTER_NUM, conf.mode,	0, 0, 0));
+    i2c_param_config(I2C_MASTER_NUM, &conf);
+    return i2c_driver_install(I2C_MASTER_NUM, conf.mode,0, 0, 0);
 }
 
 
@@ -86,9 +94,9 @@ static esp_err_t sdc40_init()
     i2c_cmd_handle_t cmd_handle = i2c_cmd_link_create();
     i2c_master_start(cmd_handle);
     ESP_ERROR_CHECK(i2c_master_write_byte(cmd_handle, SDC40_I2C_ADDR , true));
-    i2c_master_write(cmd_handle, cmd, sizeof(cmd), true);
+    ESP_ERROR_CHECK(i2c_master_write(cmd_handle, cmd, sizeof(cmd), true));
     i2c_master_stop(cmd_handle);
-    i2c_master_cmd_begin(I2C_MASTER_NUM, cmd_handle, 10000 / portTICK_PERIOD_MS);
+    ESP_ERROR_CHECK(i2c_master_cmd_begin(I2C_MASTER_NUM, cmd_handle, 1000));
     i2c_cmd_link_delete(cmd_handle);
     vTaskDelay(100 / portTICK_PERIOD_MS);  // Oczekiwanie na inicjalizację czujnika
     return ESP_OK;
@@ -147,7 +155,7 @@ static esp_err_t scd40_register_read(uint8_t* co2, uint8_t* temperature, uint8_t
 
 void app_main()
 {
-
+    /*
 	int16_t error = 0;
 
 	i2c_master_init();
@@ -182,9 +190,16 @@ void app_main()
 	        }
 	    }
 		}
-
+*/
 	    
+    i2c_master_init();
+    ESP_ERROR_CHECK(i2c_set_pin(I2C_MASTER_NUM,5,6,true,true,I2C_MODE_MASTER));
+    ESP_ERROR_CHECK(sdc40_init());
 
-
-
+    ESP_ERROR_CHECK(
+    i2c_master_write_to_device(I2C_MASTER_NUM,  (SDC40_I2C_ADDR << 1) | I2C_MASTER_WRITE,SCD4x_COMMAND_START_PERIODIC_MEASUREMENT, 
+    sizeof(SCD4x_COMMAND_START_PERIODIC_MEASUREMENT),I2C_MASTER_TIMEOUT_MS / portTICK_PERIOD_MS)
+    );
+    vTaskDelay(6000/ portTICK_PERIOD_MS);
+    //ESP_ERROR_CHECK()
 }
