@@ -1,0 +1,160 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x181c
+load:0x4086c410,len:0xd44
+load:0x4086e610,len:0x2dbc
+entry 0x4086c41a
+[0;32mI (23) boot: ESP-IDF v5.2-dev-823-g903af13e84 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jul  3 2023 18:40:23[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 40MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=42010020 size=08750h ( 34640) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=00018778 vaddr=40800000 size=078a0h ( 30880) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=0fc84h ( 64644) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=0002fcac vaddr=408078a0 size=04244h ( 16964) load[0m
+[0;32mI (130) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (131) boot: Disabling RNG early entropy source...[0m
+[0;32mI (143) cpu_start: Unicore app[0m
+[0;32mI (144) cpu_start: Pro cpu up.[0m
+[0;33mW (154) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (160) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (161) cpu_start: Application information:[0m
+[0;32mI (163) cpu_start: Project name:     hello_world[0m
+[0;32mI (169) cpu_start: App version:      adbfa51-dirty[0m
+[0;32mI (174) cpu_start: Compile time:     Jul  3 2023 18:42:12[0m
+[0;32mI (180) cpu_start: ELF file SHA256:  d05711f0c...[0m
+[0;32mI (186) cpu_start: ESP-IDF:          v5.2-dev-823-g903af13e84[0m
+[0;32mI (192) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (197) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (202) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (206) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (214) heap_init: At 4080C9B0 len 0006FC60 (447 KiB): D/IRAM[0m
+[0;32mI (220) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (227) heap_init: At 50000010 len 00003FF0 (15 KiB): RTCRAM[0m
+[0;32mI (234) spi_flash: detected chip: generic[0m
+[0;32mI (238) spi_flash: flash io: dio[0m
+[0;33mW (242) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (255) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (262) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (269) coexist: coex firmware version: ebddf30[0m
+[0;32mI (274) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (279) app_start: Starting scheduler on CPU0[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x42006906
+file: "./main/hello_world_main.c" line 101
+func: sdc40_init
+expression: i2c_master_cmd_begin(I2C_MASTER_NUM, cmd_handle, I2C_MASTER_TIMEOUT_MS/portTICK_PERIOD_MS)
+
+abort() was called at PC 0x40805509 on core 0
+Core  0 register dump:
+MEPC    : 0x40800452  RA      : 0x40805514  SP      : 0x4080f970  GP      : 0x4080b1e0  
+TP      : 0x408074e4  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x4080f9d4  A0      : 0x4080f99c  A1      : 0x4080f9d2  
+A2      : 0x00000000  A3      : 0x4080f9c9  A4      : 0x00000001  A5      : 0x4080d000  
+A6      : 0x00000000  A7      : 0x76757473  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+panic_abort (details=details@entry=0x4080f99c "abort() was called at PC 0x40805509 on core 0") at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+452	    *((volatile int *) 0) = 0; // NOLINT(clang-analyzer-core.NullDereference) should be an invalid operation on targets
+#0  panic_abort (details=details@entry=0x4080f99c "abort() was called at PC 0x40805509 on core 0") at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+#1  0x40805514 in esp_system_abort (details=details@entry=0x4080f99c "abort() was called at PC 0x40805509 on core 0") at /home/salsa/esp/esp-idf/components/esp_system/port/esp_system_chip.c:90
+#2  0x4080990e in abort () at /home/salsa/esp/esp-idf/components/newlib/abort.c:38
+#3  0x4080550c in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x420132c0 "", line=line@entry=101, function=function@entry=0x4201346c <__func__.0> "", expression=expression@entry=0x42013310 "") at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+#4  0x4200690a in sdc40_init () at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101
+#5  0x42006928 in app_main () at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:165
+#6  0x4200f8aa in main_task (args=<error reading variable: value has been optimized out>) at /home/salsa/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x40807992 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:202
+ELF file SHA256: d05711f0c
+
+Rebooting...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875720,len:0x181c
+load:0x4086c410,len:0xd44
+load:0x4086e610,len:0x2dbc
+entry 0x4086c41a
+[0;32mI (26) boot: ESP-IDF v5.2-dev-823-g903af13e84 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jul  3 2023 18:40:23[0m
+[0;32mI (28) boot: chip revision: v0.0[0m
+[0;32mI (31) boot.esp32c6: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42010020 size=08750h ( 34640) map[0m
+[0;32mI (110) esp_image: segment 1: paddr=00018778 vaddr=40800000 size=078a0h ( 30880) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=0fc84h ( 64644) map[0m
+[0;32mI (151) esp_image: segment 3: paddr=0002fcac vaddr=408078a0 size=04244h ( 16964) load[0m
+[0;32mI (165) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (176) cpu_start: Unicore app[0m
+[0;32mI (177) cpu_start: Pro cpu up.[0m
+[0;33mW (187) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (193) cpu_start: Pro cpu start user code[0m
+[0;32mI (193) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (194) cpu_start: Application information:[0m
+[0;32mI (196) cpu_start: Project name:     hello_world[0m
+[0;32mI (201) cpu_start: App version:      adbfa51-dirty[0m
+[0;32mI (207) cpu_start: Compile time:     Jul  3 2023 18:42:12[0m
+[0;32mI (213) cpu_start: ELF file SHA256:  d05711f0c...[0m
+[0;32mI (218) cpu_start: ESP-IDF:          v5.2-dev-823-g903af13e84[0m
+[0;32mI (225) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (229) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (234) cpu_start: Chip rev:         v0.0[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (246) heap_init: At 4080C9B0 len 0006FC60 (447 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 4087C610 len 00002F54 (11 KiB): STACK/DIRAM[0m
+[0;32mI (259) heap_init: At 50000010 len 00003FF0 (15 KiB): RTCRAM[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (288) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (294) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (301) coexist: coex firmware version: ebddf30[0m
+[0;32mI (307) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (312) app_start: Starting scheduler on CPU0[0m
+[0;32mI (317) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x42006906
+file: "./main/hello_world_main.c" line 101
+func: sdc40_init
+expression: i2c_master_cmd_begin(I2C_MASTER_NUM, cmd_handle, I2C_MASTER_TIMEOUT_MS/portTICK_PERIOD_MS)
+
+abort() was called at PC 0x40805509 on core 0
+Core  0 register dump:
+MEPC    : 0x40800452  RA      : 0x40805514  SP      : 0x4080f970  GP      : 0x4080b1e0  
+TP      : 0x408074e4  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x4080f9d4  A0      : 0x4080f99c  A1      : 0x4080f9d2  
+A2      : 0x00000000  A3      : 0x4080f9c9  A4      : 0x00000001  A5      : 0x4080d000  
+A6      : 0x00000000  A7      : 0x76757473  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  

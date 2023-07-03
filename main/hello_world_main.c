@@ -5,18 +5,15 @@
  */
 
 
-#include "scd4x_i2c.h"
-#include "scd4x_i2c.c"
-#include "sensirion_common.h"
-#include "sensirion_common.c"
-#include "sensirion_i2c_hal.h"
-#include "sensirion_i2c_hal.c"
 
+#include <time.h>
 #include <stdio.h>
 #include <string.h>
 #include "esp_err.h"
 #include "esp_log.h"
 #include "driver/i2c.h"
+#include "cmd_i2ctools.h"
+#include "cmd_i2ctools.c"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
@@ -56,12 +53,12 @@
 #define SCD4x_COMMAND_MEASURE_SINGLE_SHOT_RHT_ONLY            0x2196 // execution time: 50ms
 
 #define I2C_MASTER_NUM      I2C_NUM_0        // Numer interfejsu I2C
-#define I2C_MASTER_SCL_IO   0               // GPIO pin dla linii SCL
-#define I2C_MASTER_SDA_IO   1               // GPIO pin dla linii SDA
-#define I2C_MASTER_FREQ_HZ          400000                     /*!< I2C master clock frequency */
+#define I2C_MASTER_SCL_IO   7               // GPIO pin dla linii SCL
+#define I2C_MASTER_SDA_IO   6               // GPIO pin dla linii SDA
+#define I2C_MASTER_FREQ_HZ          50000                    /*!< I2C master clock frequency */
 #define I2C_MASTER_TX_BUF_DISABLE   0                          /*!< I2C master doesn't need buffer */
 #define I2C_MASTER_RX_BUF_DISABLE   0                          /*!< I2C master doesn't need buffer */
-#define I2C_MASTER_TIMEOUT_MS       1000
+#define I2C_MASTER_TIMEOUT_MS       10000
 
 #define SDC40_I2C_ADDR      0x62             // Adres czujnika SDC40
 
@@ -81,7 +78,12 @@ static esp_err_t i2c_master_init(void)
     
     };
    
-    i2c_param_config(I2C_MASTER_NUM, &conf);
+   esp_err_t error =  i2c_param_config(I2C_MASTER_NUM, &conf);
+   if(error != ESP_OK){
+        printf("Param config error \n ");
+        return error;
+
+   }
     return i2c_driver_install(I2C_MASTER_NUM, conf.mode,0, 0, 0);
 }
 
@@ -93,14 +95,15 @@ static esp_err_t sdc40_init()
     uint8_t cmd[] = {0x21, 0x20};
     i2c_cmd_handle_t cmd_handle = i2c_cmd_link_create();
     i2c_master_start(cmd_handle);
-    ESP_ERROR_CHECK(i2c_master_write_byte(cmd_handle, SDC40_I2C_ADDR , true));
-    ESP_ERROR_CHECK(i2c_master_write(cmd_handle, cmd, sizeof(cmd), true));
-    i2c_master_stop(cmd_handle);
-    ESP_ERROR_CHECK(i2c_master_cmd_begin(I2C_MASTER_NUM, cmd_handle, 1000));
+    ESP_ERROR_CHECK(i2c_master_write_byte(cmd_handle, (SDC40_I2C_ADDR<<1)| I2C_MASTER_WRITE, 0x1));
+    ESP_ERROR_CHECK(i2c_master_write(cmd_handle, cmd, sizeof(cmd), 0x1));
+    ESP_ERROR_CHECK(i2c_master_stop(cmd_handle));
+    ESP_ERROR_CHECK(i2c_master_cmd_begin(I2C_MASTER_NUM, cmd_handle, I2C_MASTER_TIMEOUT_MS/portTICK_PERIOD_MS));
     i2c_cmd_link_delete(cmd_handle);
-    vTaskDelay(100 / portTICK_PERIOD_MS);  // Oczekiwanie na inicjalizację czujnika
+    // Oczekiwanie na inicjalizację czujnika
     return ESP_OK;
 }
+
 
 
 static esp_err_t scd40_start_periodic_measurement() {
@@ -155,51 +158,21 @@ static esp_err_t scd40_register_read(uint8_t* co2, uint8_t* temperature, uint8_t
 
 void app_main()
 {
-    /*
-	int16_t error = 0;
-
-	i2c_master_init();
-	ESP_ERROR_CHECK(sdc40_init());
-
-	error = scd40_start_periodic_measurement();
-	    if (error) {
-	        printf("Error executing scd4x_start_periodic_measurement(): %i\n",
-	               error);
-	    }
-		else{
-		printf("Waiting for first measurement... (5 sec)\n");
-
-	    for (;;) {
-	        // Read Measurement
-	    	vTaskDelay(6000/ portTICK_PERIOD_MS);
-	        bool data_ready_flag = false;
-	        
-	     
-	        uint16_t co2=0;
-	        int32_t temperature;
-	        int32_t humidity;
-	        scd40_register_read(&co2, &temperature, &humidity);
-	        if (error) {
-	            printf("Error executing scd4x_read_measurement(): %i\n", error);
-	        } else if (co2 == 0) {
-	            printf("Invalid sample detected, skipping.\n");
-	        } else {
-	            printf("CO2: %u\n", co2);
-	            printf("Temperature: %d m°C\n", (int)temperature);
-	            printf("Humidity: %d mRH\n",(int) humidity);
-	        }
-	    }
-		}
-*/
-	    
-    i2c_master_init();
-    ESP_ERROR_CHECK(i2c_set_pin(I2C_MASTER_NUM,5,6,true,true,I2C_MODE_MASTER));
+    //sleep(5);
+    ESP_ERROR_CHECK(i2c_master_init());
+    //ESP_ERROR_CHECK(i2c_master_driver_initialize());
+    //ESP_ERROR_CHECK(i2c_set_pin(I2C_MASTER_NUM,6,7,true,true,I2C_MODE_MASTER));
     ESP_ERROR_CHECK(sdc40_init());
-
+    uint16_t write_buff = SCD4x_COMMAND_READ_MEASUREMENT;
+    //usleep(100);
     ESP_ERROR_CHECK(
-    i2c_master_write_to_device(I2C_MASTER_NUM,  (SDC40_I2C_ADDR << 1) | I2C_MASTER_WRITE,SCD4x_COMMAND_START_PERIODIC_MEASUREMENT, 
-    sizeof(SCD4x_COMMAND_START_PERIODIC_MEASUREMENT),I2C_MASTER_TIMEOUT_MS / portTICK_PERIOD_MS)
+    i2c_master_write_to_device(I2C_MASTER_NUM,  (SDC40_I2C_ADDR << 1) | I2C_MASTER_WRITE,write_buff, 
+    sizeof(write_buff),I2C_MASTER_TIMEOUT_MS / portTICK_PERIOD_MS)
     );
-    vTaskDelay(6000/ portTICK_PERIOD_MS);
+    //usleep(100);
+    i2c_driver_delete(I2C_MASTER_NUM);
+    esp_err_t error = 0;
+    //ESP_ERROR_CHECK(i2c_master_init());
+
     //ESP_ERROR_CHECK()
 }

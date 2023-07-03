@@ -14,6 +14,12 @@
 # EXTERNAL cache entries
 ########################
 
+//No help, variable specified on the command line.
+CCACHE_ENABLE:UNINITIALIZED=1
+
+//Path to a program.
+CCACHE_FOUND:FILEPATH=/usr/bin/ccache
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/home/salsa/.espressif/tools/riscv32-esp-elf/esp-12.2.0_20230208/riscv32-esp-elf/bin/riscv32-esp-elf-addr2line
 
@@ -314,6 +320,9 @@ LINK_WITH_TRUSTED_STORAGE:BOOL=OFF
 MBEDTLS_FATAL_WARNINGS:BOOL=ON
 
 //No help, variable specified on the command line.
+PYTHON:UNINITIALIZED=/home/salsa/.espressif/python_env/idf5.2_py3.10_env/bin/python
+
+//No help, variable specified on the command line.
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1
 
 //Allow unsafe builds. These builds ARE NOT SECURE.
@@ -555,7 +564,7 @@ C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.34.1()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/salsa/.espressif/python_env/idf5.2_py3.10_env/bin/python3.10][cfound components: Interpreter ][v3.10.6()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/salsa/.espressif/python_env/idf5.2_py3.10_env/bin/python][cfound components: Interpreter ][v3.10.6()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have include stddef.h
@@ -570,9 +579,8 @@ HAVE_TIME_T_SIZE:INTERNAL=TRUE
 TIME_T_SIZE:INTERNAL=8
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
-//Path to a program.
-_Python3_EXECUTABLE:INTERNAL=/home/salsa/.espressif/python_env/idf5.2_py3.10_env/bin/python3.10
+_Python3_EXECUTABLE:INTERNAL=/home/salsa/.espressif/python_env/idf5.2_py3.10_env/bin/python
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;6;32;;;/usr/lib/python3.10;/usr/lib/python3.10;/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages;/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=25a5f042af22fd5181cc0337442891d3
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=2e56cfb9e9e641cc4d8f17c997ab1188
 

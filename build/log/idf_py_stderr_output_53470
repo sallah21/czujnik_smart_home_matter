@@ -1,0 +1,611 @@
+[0;33m--- idf_monitor on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/home/salsa/esp/projekt/czujnik_smart_home_matter/build/hello_world.elf', '-ex', 'target remote | "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/bin/python" "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py" --target esp32c6 "/tmp/tmpfsqt9jel"', '-ex', 'bt']' returned non-zero exit status 1.
+b'Traceback (most recent call last):\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 291, in <module>\n    main()\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 281, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 148, in parse_idf_riscv_panic_output\n    stack_base_addr, stack_data = get_stack_addr_and_data(res)\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 116, in get_stack_addr_and_data\n    assert base_addr == prev_base_addr + bytes_in_line\nAssertionError\nRemote communication error.  Target disconnected.: Connection reset by peer.\nNo stack.\n'
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/home/salsa/esp/projekt/czujnik_smart_home_matter/build/hello_world.elf', '-ex', 'target remote | "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/bin/python" "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py" --target esp32c6 "/tmp/tmpszejauae"', '-ex', 'bt']' returned non-zero exit status 1.
+b'Traceback (most recent call last):\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 291, in <module>\n    main()\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 281, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 134, in parse_idf_riscv_panic_output\n    raise ValueError("Couldn\'t parse panic handler output")\nValueError: Couldn\'t parse panic handler output\nRemote communication error.  Target disconnected.: Connection reset by peer.\nNo stack.\n'
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/home/salsa/esp/projekt/czujnik_smart_home_matter/build/hello_world.elf', '-ex', 'target remote | "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/bin/python" "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py" --target esp32c6 "/tmp/tmpzh6rgnvw"', '-ex', 'bt']' returned non-zero exit status 1.
+b'Traceback (most recent call last):\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 291, in <module>\n    main()\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 281, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 134, in parse_idf_riscv_panic_output\n    raise ValueError("Couldn\'t parse panic handler output")\nValueError: Couldn\'t parse panic handler output\nRemote communication error.  Target disconnected.: Connection reset by peer.\nNo stack.\n'
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/home/salsa/esp/projekt/czujnik_smart_home_matter/build/hello_world.elf', '-ex', 'target remote | "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/bin/python" "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py" --target esp32c6 "/tmp/tmpf_v62lx1"', '-ex', 'bt']' returned non-zero exit status 1.
+b'Traceback (most recent call last):\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 291, in <module>\n    main()\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 281, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 134, in parse_idf_riscv_panic_output\n    raise ValueError("Couldn\'t parse panic handler output")\nValueError: Couldn\'t parse panic handler output\nRemote communication error.  Target disconnected.: Connection reset by peer.\nNo stack.\n'
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/home/salsa/esp/projekt/czujnik_smart_home_matter/build/hello_world.elf', '-ex', 'target remote | "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/bin/python" "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py" --target esp32c6 "/tmp/tmpax0hztij"', '-ex', 'bt']' returned non-zero exit status 1.
+b'Traceback (most recent call last):\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 291, in <module>\n    main()\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 281, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/home/salsa/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages/esp_idf_monitor/base/../gdb_panic_server.py", line 134, in parse_idf_riscv_panic_output\n    raise ValueError("Couldn\'t parse panic handler output")\nValueError: Couldn\'t parse panic handler output\nRemote communication error.  Target disconnected.: Connection reset by peer.\nNo stack.\n'
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+Backtrace:
+
+[0m
+[0;33m0x4200694c: sdc40_init at /home/salsa/esp/projekt/czujnik_smart_home_matter/main/hello_world_main.c:101 (discriminator 1)
+[0m
+[0;33m0x40805509: _esp_error_check_failed at /home/salsa/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40800452: panic_abort at /home/salsa/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x40805514: __ubsan_include at /home/salsa/esp/esp-idf/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40807504: xTaskPriorityDisinherit at /home/salsa/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5235 (discriminator 1)
+[0m
+[0;33m0x40800001: _vector_table at ??:?
+[0m
+[0m
