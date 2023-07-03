@@ -50,8 +50,8 @@
 #define SCD4x_COMMAND_MEASURE_SINGLE_SHOT_RHT_ONLY            0x2196 // execution time: 50ms
 
 #define I2C_MASTER_NUM      I2C_NUM_0        // Numer interfejsu I2C
-#define I2C_MASTER_SCL_IO   7               // GPIO pin dla linii SCL
-#define I2C_MASTER_SDA_IO   6               // GPIO pin dla linii SDA
+#define I2C_MASTER_SCL_IO   6               // GPIO pin dla linii SCL
+#define I2C_MASTER_SDA_IO   7               // GPIO pin dla linii SDA
 #define I2C_MASTER_FREQ_HZ  100000           // Szybkość transmisji I2C (400 kHz)
 #define I2C_MASTER_TIMEOUT_MS  1000
 
