@@ -1,4 +1,4 @@
-/* * Data converted from /workspaces/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/salsa/esp/hello_world/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded
